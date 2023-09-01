@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  app:
+    container_name: project-nodejs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
